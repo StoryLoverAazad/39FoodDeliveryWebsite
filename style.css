@@ -1,0 +1,217 @@
+/*Css Reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Css Variables*/
+:root{
+    --navbar-height:59px;
+}
+/*Navigation Bar*/
+#navbar {
+    display:flex;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+}
+/* Navigation bar:Logo and Image  */
+#logo{
+ margin: -39px -7px;
+ height: 170px;
+}
+#logo img{
+    margin: 48px 33px;
+    height: 70px;
+}
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+    margin: 0px;
+}
+#navbar::before{ /* for displaying the strip box in navbar */
+    content: "";
+    background-color: rgb(66, 53, 53);
+    position:absolute;
+    top: 0px;
+    left: opx;
+    height: 100%;
+    width: 100%;
+     z-index: -1; /* for displaying the content of navbar above the strip  */
+     opacity: 0.9; /*for the brightness of the the content of the navbar */
+    
+}
+#navbar ul li{
+    margin: 34px;
+    list-style: none;
+    font-size: 1.5rem;
+}
+#navbar ul li a{
+    text-decoration: none;
+    margin: 3px 4px;
+    padding: 4px 5px;
+    color: rgb(246, 241, 241);
+    border-radius: 10px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/* Home Section  */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:25px 100px;
+    height: 415px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background:url(./bg2.jpg)no-repeat center center/cover; 
+    position: absolute;
+    top: 0px;
+    left: opx;
+    height: 560px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#home h1{
+   text-align: center;
+   font-family: 'Bree Serif', serif;
+}
+#home p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+ }
+ /* Services Section */
+
+#services{
+    display: flex;
+    margin: 0px;
+    padding: 0px 38px;
+}
+
+.box{
+    border: 2px solid red;
+    margin: 12px;
+    border-radius: 12px;
+    background-color: rgb(242, 246, 246);
+}
+.box img{
+    padding: 28px 28px 10px;
+    height: 100px;
+    
+}
+.box p{
+    font-family: 'Bree Serif', serif;
+    padding: 5px;
+}
+
+/* Client Section  */
+
+#client-section{
+    position: relative;
+    height: 100%;
+}
+#clients{
+    display:flex ; 
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+}
+#clients img{
+    height: 200px;
+    display:flex; 
+    justify-content:center;
+    align-items: center;
+}
+.clients-item{
+padding: 34px;
+}
+
+#client-section::before{
+    content: "";
+    background:url(./bg2.jpg)no-repeat center center/cover; 
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Contact Section  */
+
+#contact{
+    position: relative;
+    /* padding: 20px; */
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(./img.jpg) no-repeat center center/cover;
+}
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    font-family: 'Bree Serif', serif; 
+}
+#contact-box input{
+ padding: 0.5rem;
+ width: 100%;
+ border-radius: 12px;
+    font-size: 1.0rem;
+}
+#contact-box textarea{
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1.3rem;
+}
+#contact-box form{
+    width: 600px;
+}
+#contact-box label{
+    font-size: 1.2rem;
+}
+#contact-box placeholder{
+    font-size: 1.2rem;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 10px;
+}
+
+/* Utility Class: best way to do it because it increases code reusability */
+.h-primary{
+   font-size:2.8rem;
+   padding: 12px; 
+   font-family: 'Bree Serif', serif; 
+}
+.h-secondary{
+    font-size:1.8rem;
+    padding: 12px; 
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    border: 2px solid white;
+    padding: 4px 4px 5px 5px;
+    background-color: rgb(182, 156, 164);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    margin: 6px 5px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
